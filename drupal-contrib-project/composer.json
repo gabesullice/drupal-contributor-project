@@ -3,20 +3,22 @@
     "description": "A project template for doing Drupal core and contrib work.",
     "license": "proprietary",
     "require": {
-        "acquia/composer-installer-plugin": "dev-composer-plugin",
-        "drupal/core": "8.8.2",
-        "drupal/checklistapi": "1.x-dev",
-        "composer/installers": "^1.0@dev"
+        "acquia/drupal-contrib-installer": "*@dev",
+        "composer/installers": "^1.0@dev",
+        "drupal/drupal": "8.8.2"
     },
     "config": {
         "preferred-install": {
             "drupal/drupal": "source"
         }
     },
+    "extra": {
+        "installer-disable": ["drupal"]
+    },
     "repositories": {
-        "composer-plugin": {
+        "installer-plugin": {
             "type": "path",
-            "url": "composer-installer-plugin"
+            "url": "../drupal-contrib-installer"
         },
         "drupal": {
             "type": "composer",

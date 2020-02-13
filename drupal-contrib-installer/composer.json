@@ -1,5 +1,5 @@
 {
-    "name": "acquia/composer-installer-plugin",
+    "name": "acquia/drupal-contrib-installer",
     "type": "composer-plugin",
     "description": "",
     "license": "MIT",
@@ -10,11 +10,11 @@
         "composer/composer": "^1.9"
     },
     "extra": {
-        "class": "DrupalContribInstaller\\Composer\\Plugin\\InstallerPlugin"
+        "class": "DrupalContribInstaller\\Composer\\InstallerActivator"
     },
     "autoload": {
-        "psr-0": {
-            "DrupalContribInstaller\\Composer": "src/"
+        "psr-4": {
+            "DrupalContribInstaller\\Composer\\": "src/"
         }
     }
 }
