@@ -24,4 +24,6 @@ composer config repositories.acquia-migrate vcs git@github.com:acquia/acquia_mig
 
 composer require -v drupal/acquia_migrate
 
+composer update
+
 popd
