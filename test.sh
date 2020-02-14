@@ -20,6 +20,8 @@ cp ../drupal-contrib-project/composer.json ./
 
 composer install -v
 
-composer require -v drupal/checklistapi
+composer config repositories.acquia-migrate vcs git@github.com:acquia/acquia_migrate.git
+
+composer require -v drupal/acquia_migrate
 
 popd

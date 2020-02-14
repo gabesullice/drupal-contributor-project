@@ -5,6 +5,7 @@
     "require": {
         "acquia/drupal-contrib-installer": "*@dev",
         "composer/installers": "^1.0@dev",
+        "cweagans/composer-patches": "^1.6.7",
         "drupal/drupal": "8.8.2"
     },
     "config": {
@@ -13,6 +14,7 @@
         }
     },
     "extra": {
+        "enable-patching": true,
         "installer-disable": ["drupal"]
     },
     "repositories": {
@@ -28,6 +30,9 @@
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
+    },
+    "scripts": {
+        "post-update-cmd": "mkdir -p contrib/modules && test -e ./web/modules/contrib || ln -sf ../../contrib/modules/ ./web/modules/contrib"
     },
     "minimum-stability": "dev"
 }
