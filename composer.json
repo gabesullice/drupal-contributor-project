@@ -1,12 +1,12 @@
 {
     "name": "drupal/contributor-project",
-    "description": "A project template for doing Drupal core and contrib work.",
     "type": "project",
+    "description": "A project template for doing Drupal core and contrib work.",
     "license": "proprietary",
     "require": {
-        "drupal/installer-plugin": "*",
         "composer/installers": "^1.0@dev",
         "cweagans/composer-patches": "^1.6.7",
+        "drupal/contrib-installer": "*",
         "drupal/drupal": "8.8.2"
     },
     "config": {
@@ -16,12 +16,14 @@
     },
     "extra": {
         "enable-patching": true,
-        "installer-disable": ["drupal"]
+        "installer-disable": [
+            "drupal"
+        ]
     },
     "repositories": {
         "installer-plugin": {
-            "type": "path",
-            "url": "../drupal-contrib-project/installer-plugin"
+            "type": "vcs",
+            "url": "git@github.com:gabesullice/drupal-contrib-installer.git"
         },
         "drupal": {
             "type": "composer",
