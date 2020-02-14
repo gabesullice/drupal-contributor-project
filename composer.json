@@ -4,7 +4,7 @@
     "type": "project",
     "license": "proprietary",
     "require": {
-        "acquia/drupal-contrib-installer": "*@dev",
+        "drupal/installer-plugin": "*",
         "composer/installers": "^1.0@dev",
         "cweagans/composer-patches": "^1.6.7",
         "drupal/drupal": "8.8.2"
@@ -21,7 +21,7 @@
     "repositories": {
         "installer-plugin": {
             "type": "path",
-            "url": "../drupal-contrib-installer"
+            "url": "../drupal-contrib-project/installer-plugin"
         },
         "drupal": {
             "type": "composer",
