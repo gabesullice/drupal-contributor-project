@@ -77,7 +77,7 @@ vendor
   # etc.
 ```
 
-# Tips & Tricks
+## Tips & Tricks
 You may already know about the `.gitigore` file to prevent Git from tracking
 certain files and directories. Usually, that's great. However, if you have files
 that you don't want to be tracked locally but you also do _not_ want to modify
