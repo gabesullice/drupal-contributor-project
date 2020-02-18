@@ -11,7 +11,7 @@
     },
     "config": {
         "preferred-install": {
-            "drupal/drupal": "source"
+            "drupal/*": "source"
         }
     },
     "extra": {
