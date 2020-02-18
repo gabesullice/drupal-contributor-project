@@ -48,33 +48,34 @@ The resulting directory structure will look like this:
 ```
 composer.json
 contrib
-↳ modules
-  ↳ cdn
-    ↳ .git
+ ↳  modules
+     ↳  cdn
+         ↳  .git
   themes
   profiles
   libraries
 web
-↳ .git
-  index.php
-  sites
-  ↳ default
-    ↳ default.settings.php
-      files
-      # etc.
-  modules
-  ↳ contrib -> ../../contrib/modules # symlink to the top-level contrib/modules directory.
-  themes
-  ↳ themes -> ../../contrib/themes # symlink.
-  profiles
-  ↳ profiles -> ../../contrib/profiles # symlink.
-  libraries
-  ↳ libraries -> ../../contrib/libraries # symlink.
-  # etc.
+ ↳  .git
+    index.php
+    sites
+     ↳  default
+         ↳  default.settings.php
+            files
+            # etc.
+    modules
+     ↳  contrib -> ../../contrib/modules     # symlink to the top-level contrib/modules directory.
+    themes
+     ↳  themes -> ../../contrib/themes       # symlink.
+    profiles
+     ↳  profiles -> ../../contrib/profiles   # symlink.
+    libraries
+     ↳  libraries -> ../../contrib/libraries # symlink.
+    vendor -> ../vendor                      # symlink.
+    # etc.
 vendor
-↳ bin
-  autoload.php
-  # etc.
+ ↳  bin
+    autoload.php
+    # etc.
 ```
 
 ## Tips & Tricks
