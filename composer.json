@@ -4,10 +4,10 @@
     "description": "A project template for doing Drupal core and contrib work.",
     "license": "proprietary",
     "require": {
-        "composer/installers": "^1.0@dev",
-        "cweagans/composer-patches": "^1.6.7",
-        "drupal/contrib-installer": "*",
-        "drupal/drupal": "8.8.2"
+        "cweagans/composer-patches": "^1.6",
+        "drupal/contrib-installer": "dev-master",
+        "drupal/drupal": "*@dev",
+        "drupal/core-dev": "*@dev"
     },
     "config": {
         "preferred-install": {
@@ -21,22 +21,13 @@
         ]
     },
     "repositories": {
-        "installer-plugin": {
+        "drupal-contrib-installer-plugin": {
             "type": "vcs",
-            "url": "git@github.com:gabesullice/drupal-contrib-installer.git"
+            "url": "https://github.com/gabesullice/drupal-contrib-installer.git"
         },
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        "drupal-core": {
-            "type": "path",
-            "url": "web/core"
-        },
-        "asset-packagist": {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
