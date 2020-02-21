@@ -1,8 +1,11 @@
 {
     "name": "drupal/contributor-project",
     "type": "project",
-    "description": "A project template for doing Drupal core and contrib work.",
-    "license": "proprietary",
+    "description": "A project template for contributing to Drupal core and contrib.",
+    "license": "MIT",
+    "replace": {
+        "drupal/core": "*"
+    },
     "require": {
         "cweagans/composer-patches": "^1.6",
         "drupal/contrib-installer": "dev-master",
@@ -18,16 +21,20 @@
         "enable-patching": true,
         "installer-disable": [
             "drupal"
-        ]
+        ],
+        "patchLevel": {
+            "drupal/drupal": "-p1"
+        }
     },
     "repositories": {
-        "drupal-contrib-installer-plugin": {
+        "github.com/gabesullice/drupal-contrib-installer": {
             "type": "vcs",
             "url": "https://github.com/gabesullice/drupal-contrib-installer.git"
         },
-        "drupal": {
+        "packages.drupal.org": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
-    }
+    },
+    "minimum-stability": "dev"
 }
