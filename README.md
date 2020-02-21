@@ -78,38 +78,12 @@ vendor
     # etc.
 ```
 
-## Tips & Tricks
-You may already know about the `.gitigore` file to prevent Git from tracking
-certain files and directories. Usually, that's great. However, if you have files
-that you don't want to be tracked locally but you also do _not_ want to modify
-the `.gitignore` file, you can add exlusions to a file named
-`.git/info/exclude`.
-
-This file behaves just like a `.gitignore` file at the root of your repository.
-
-To ignore any changes to Drupal core caused by installing this project and
-regular usage, try adding the following lines to a file located at
-`web/.git/info/exclude`:
-
-```
-sites/default/files
-sites/default/settings.php
-
-modules/contrib
-modules/custom
-
-themes/contrib
-themes/custom
-
-profiles/contrib
-profiles/custom
-
-libraries/contrib
-libraries/custom
-
-vendor
-
-PATCHES.txt
-```
+## Wait... but how does it?
+- Allow you to generate patches using git while also adding things to the git
+checkout?
+  - I'm glad you asked! The `gabesullice/drupal-contrib-installer` plugin
+  required by this project's `composer.json` automatically adds exclusions to the
+  `web/.git/info/exclude` file. Thus, any unwanted changes caused by this
+  project's structure will not appear in your core patches.
 
 Built with 💙 by @TravisCarden & @GabeSullice at @Acquia.
