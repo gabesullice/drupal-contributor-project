@@ -1,3 +1,5 @@
+Stability: ALPHA
+
 Drupal Contributor Project
 ===
 
