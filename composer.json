@@ -36,5 +36,15 @@
             "url": "https://packages.drupal.org/8"
         }
     },
+    "scripts": {
+        "pre-update-cmd": [
+            "test -e ./web/sites/default/settings.php && cp ./web/sites/default/settings.php ./",
+            "test -e ./web/core/phpunit.xml && cp ./web/core/phpunit.xml ./"
+        ],
+        "post-update-cmd": [
+            "test -e ./settings.php && cp ./settings.php ./web/sites/default/",
+            "test -e ./phpunit.xml && cp ./phpunit.xml web/core/"
+        ]
+    },
     "minimum-stability": "dev"
 }
